@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="GyrometerRead.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GyrometerRead"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+   <Page.BottomAppBar>
+            <CommandBar>
+            <AppBarButton x:Name="_x_abb_start" Icon="Read" Label="Get Reading" Click="AppBarButton_Click"/>
+        </CommandBar>
+        </Page.BottomAppBar>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="_x_tbl_title" Grid.Row="1" Text="Gyrometer" HorizontalAlignment="Center" FontSize="26"></TextBlock>
+            <StackPanel x:Name="_x_spnl_reading" Grid.Row="3" Orientation="Horizontal">
+                <TextBox x:Name="_x_txt_xReading" TextWrapping="Wrap" FontSize="24" IsReadOnly="True" Width="100" Height="30" Margin="20,20,0,0"/>
+                <TextBox x:Name="_x_txt_yReading" TextWrapping="Wrap" FontSize="24" IsReadOnly="True" Width="100" Height="30" Margin="20,20,0,0"></TextBox>
+                <TextBox x:Name="_x_txt_zReading" TextWrapping="Wrap" FontSize="24" IsReadOnly="True" Width="100" Height="30" Margin="20,20,0,20"></TextBox>
+            </StackPanel>
+        </Grid>
+
+   
+</Page>
